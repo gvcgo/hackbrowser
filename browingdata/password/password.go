@@ -9,7 +9,7 @@ import (
 	"time"
 
 	// import sqlite3 driver
-	_ "github.com/glebarez/go-sqlite"
+	_ "github.com/moqsien/hackbrowser/utils/hsqlite"
 
 	"github.com/moqsien/hackbrowser/crypto"
 	"github.com/moqsien/hackbrowser/item"
