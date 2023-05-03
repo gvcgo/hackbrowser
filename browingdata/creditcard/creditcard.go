@@ -5,7 +5,7 @@ import (
 	"os"
 
 	// import sqlite3 driver
-	_ "modernc.org/sqlite"
+	_ "github.com/glebarez/go-sqlite"
 
 	"github.com/moqsien/hackbrowser/crypto"
 	"github.com/moqsien/hackbrowser/item"
