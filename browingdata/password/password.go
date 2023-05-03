@@ -9,13 +9,13 @@ import (
 	"time"
 
 	// import sqlite3 driver
-	_ "github.com/mattn/go-sqlite3"
-	"github.com/tidwall/gjson"
+	_ "modernc.org/sqlite"
 
 	"github.com/moqsien/hackbrowser/crypto"
 	"github.com/moqsien/hackbrowser/item"
 	"github.com/moqsien/hackbrowser/log"
 	"github.com/moqsien/hackbrowser/utils/typeutil"
+	"github.com/tidwall/gjson"
 )
 
 type ChromiumPassword []loginData
