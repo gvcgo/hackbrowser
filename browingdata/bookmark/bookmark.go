@@ -10,10 +10,10 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/tidwall/gjson"
 
-	"github.com/moond4rk/HackBrowserData/item"
-	"github.com/moond4rk/HackBrowserData/log"
-	"github.com/moond4rk/HackBrowserData/utils/fileutil"
-	"github.com/moond4rk/HackBrowserData/utils/typeutil"
+	"github.com/moqsien/hackbrowser/item"
+	"github.com/moqsien/hackbrowser/log"
+	"github.com/moqsien/hackbrowser/utils/fileutil"
+	"github.com/moqsien/hackbrowser/utils/typeutil"
 )
 
 type ChromiumBookmark []bookmark

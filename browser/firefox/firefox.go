@@ -6,10 +6,10 @@ import (
 	"io/fs"
 	"path/filepath"
 
-	"github.com/moond4rk/HackBrowserData/browingdata"
-	"github.com/moond4rk/HackBrowserData/item"
-	"github.com/moond4rk/HackBrowserData/utils/fileutil"
-	"github.com/moond4rk/HackBrowserData/utils/typeutil"
+	"github.com/moqsien/hackbrowser/browingdata"
+	"github.com/moqsien/hackbrowser/item"
+	"github.com/moqsien/hackbrowser/utils/fileutil"
+	"github.com/moqsien/hackbrowser/utils/typeutil"
 )
 
 type Firefox struct {

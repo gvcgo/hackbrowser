@@ -5,9 +5,9 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	"github.com/moond4rk/HackBrowserData/browser"
-	"github.com/moond4rk/HackBrowserData/log"
-	"github.com/moond4rk/HackBrowserData/utils/fileutil"
+	"github.com/moqsien/hackbrowser/browser"
+	"github.com/moqsien/hackbrowser/log"
+	"github.com/moqsien/hackbrowser/utils/fileutil"
 )
 
 var (
@@ -28,7 +28,7 @@ func Execute() {
 	app := &cli.App{
 		Name:      "hack-browser-data",
 		Usage:     "Export password|bookmark|cookie|history|credit card|download|localStorage|extension from browser",
-		UsageText: "[hack-browser-data -b chrome -f json -dir results -cc]\nExport all browingdata(password/cookie/history/bookmark) from browser\nGithub Link: https://github.com/moonD4rk/HackBrowserData",
+		UsageText: "[hack-browser-data -b chrome -f json -dir results -cc]\nExport all browingdata(password/cookie/history/bookmark) from browser\nGithub Link: https://github.com/moqsien/hackbrowser",
 		Version:   "0.5.0",
 		Flags: []cli.Flag{
 			&cli.BoolFlag{Name: "verbose", Aliases: []string{"vv"}, Destination: &verbose, Value: false, Usage: "verbose"},

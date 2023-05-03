@@ -3,18 +3,18 @@ package browingdata
 import (
 	"path"
 
-	"github.com/moond4rk/HackBrowserData/browingdata/bookmark"
-	"github.com/moond4rk/HackBrowserData/browingdata/cookie"
-	"github.com/moond4rk/HackBrowserData/browingdata/creditcard"
-	"github.com/moond4rk/HackBrowserData/browingdata/download"
-	"github.com/moond4rk/HackBrowserData/browingdata/extension"
-	"github.com/moond4rk/HackBrowserData/browingdata/history"
-	"github.com/moond4rk/HackBrowserData/browingdata/localstorage"
-	"github.com/moond4rk/HackBrowserData/browingdata/password"
-	"github.com/moond4rk/HackBrowserData/browingdata/sessionstorage"
-	"github.com/moond4rk/HackBrowserData/item"
-	"github.com/moond4rk/HackBrowserData/log"
-	"github.com/moond4rk/HackBrowserData/utils/fileutil"
+	"github.com/moqsien/hackbrowser/browingdata/bookmark"
+	"github.com/moqsien/hackbrowser/browingdata/cookie"
+	"github.com/moqsien/hackbrowser/browingdata/creditcard"
+	"github.com/moqsien/hackbrowser/browingdata/download"
+	"github.com/moqsien/hackbrowser/browingdata/extension"
+	"github.com/moqsien/hackbrowser/browingdata/history"
+	"github.com/moqsien/hackbrowser/browingdata/localstorage"
+	"github.com/moqsien/hackbrowser/browingdata/password"
+	"github.com/moqsien/hackbrowser/browingdata/sessionstorage"
+	"github.com/moqsien/hackbrowser/item"
+	"github.com/moqsien/hackbrowser/log"
+	"github.com/moqsien/hackbrowser/utils/fileutil"
 )
 
 type Data struct {

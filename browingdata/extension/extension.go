@@ -5,9 +5,9 @@ import (
 
 	"github.com/tidwall/gjson"
 
-	"github.com/moond4rk/HackBrowserData/item"
-	"github.com/moond4rk/HackBrowserData/log"
-	"github.com/moond4rk/HackBrowserData/utils/fileutil"
+	"github.com/moqsien/hackbrowser/item"
+	"github.com/moqsien/hackbrowser/log"
+	"github.com/moqsien/hackbrowser/utils/fileutil"
 )
 
 type ChromiumExtension []*extension
