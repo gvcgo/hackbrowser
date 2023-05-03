@@ -8,6 +8,7 @@ import (
 	"github.com/moqsien/hackbrowser/browingdata"
 	"github.com/moqsien/hackbrowser/browser/chromium"
 	"github.com/moqsien/hackbrowser/browser/firefox"
+	"github.com/moqsien/hackbrowser/item"
 	"github.com/moqsien/hackbrowser/log"
 	"github.com/moqsien/hackbrowser/utils/fileutil"
 	"github.com/moqsien/hackbrowser/utils/typeutil"
@@ -16,6 +17,8 @@ import (
 type Browser interface {
 	// Name is browser's name
 	Name() string
+	// Customize items to save.
+	OnlyToSave(toSave []item.Item)
 	// BrowsingData returns all browsing data in the browser.
 	BrowsingData(isFullExport bool) (*browingdata.Data, error)
 }

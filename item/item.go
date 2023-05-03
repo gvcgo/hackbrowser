@@ -194,3 +194,13 @@ var DefaultChromium = []Item{
 	ChromiumSessionStorage,
 	ChromiumExtension,
 }
+
+var DefaultOnlyToSave = []Item{
+	FirefoxPassword,
+	ChromiumPassword,
+	YandexPassword,
+	FirefoxBookmark,
+	ChromiumBookmark,
+	FirefoxExtension,
+	ChromiumExtension,
+}

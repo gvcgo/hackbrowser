@@ -48,6 +48,20 @@ func (c *Chromium) Name() string {
 	return c.name
 }
 
+func (c *Chromium) OnlyToSave(toSave []item.Item) {
+	newItems := []item.Item{}
+	for _, itm := range c.items {
+	INNER:
+		for _, s := range toSave {
+			if itm == s {
+				newItems = append(newItems, itm)
+				break INNER
+			}
+		}
+	}
+	c.items = newItems
+}
+
 func (c *Chromium) BrowsingData(isFullExport bool) (*browingdata.Data, error) {
 	items := c.items
 	if !isFullExport {

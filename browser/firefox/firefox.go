@@ -87,6 +87,20 @@ func (f *Firefox) Name() string {
 	return f.name
 }
 
+func (f *Firefox) OnlyToSave(toSave []item.Item) {
+	newItems := []item.Item{}
+	for _, itm := range f.items {
+	INNER:
+		for _, s := range toSave {
+			if itm == s {
+				newItems = append(newItems, itm)
+				break INNER
+			}
+		}
+	}
+	f.items = newItems
+}
+
 func (f *Firefox) BrowsingData(isFullExport bool) (*browingdata.Data, error) {
 	items := f.items
 	if !isFullExport {
