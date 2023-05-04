@@ -11,6 +11,10 @@ import (
 	"github.com/moqsien/hackbrowser/utils/typeutil"
 )
 
+const (
+	chromium = "chromium"
+)
+
 type Chromium struct {
 	name        string
 	storage     string
@@ -85,6 +89,34 @@ func (c *Chromium) BrowsingData(isFullExport bool) (*browingdata.Data, error) {
 	}
 
 	return data, nil
+}
+
+func (c *Chromium) CopyBookmark() (browserType string, err error) {
+	browserType = chromium
+	for i, path := range c.itemPaths {
+		filename := i.String()
+		if filename != item.TempChromiumBookmark {
+			continue
+		}
+		switch {
+		case fileutil.IsDirExists(path):
+			if i == item.ChromiumLocalStorage {
+				err = fileutil.CopyDir(path, filename, "lock")
+			}
+			if i == item.ChromiumSessionStorage {
+				err = fileutil.CopyDir(path, filename, "lock")
+			}
+			if i == item.ChromiumExtension {
+				err = fileutil.CopyDirHasSuffix(path, filename, "manifest.json")
+			}
+		default:
+			err = fileutil.CopyFile(path, filename)
+		}
+		if err != nil {
+			return
+		}
+	}
+	return
 }
 
 func (c *Chromium) copyItemToLocal() error {

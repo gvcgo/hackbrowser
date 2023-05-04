@@ -87,6 +87,24 @@ func (f *Firefox) Name() string {
 	return f.name
 }
 
+const (
+	firefox = "firefox"
+)
+
+func (f *Firefox) CopyBookmark() (browserType string, err error) {
+	browserType = firefox
+	for i, path := range f.itemPaths {
+		filename := i.String()
+		if filename != item.TempFirefoxBookmark {
+			continue
+		}
+		if err = fileutil.CopyFile(path, filename); err != nil {
+			return
+		}
+	}
+	return
+}
+
 func (f *Firefox) OnlyToSave(toSave []item.Item) {
 	newItems := []item.Item{}
 	for _, itm := range f.items {

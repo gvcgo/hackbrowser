@@ -19,6 +19,8 @@ type Browser interface {
 	Name() string
 	// Customize items to save.
 	OnlyToSave(toSave []item.Item)
+	// Copy bookmarks
+	CopyBookmark() (string, error)
 	// BrowsingData returns all browsing data in the browser.
 	BrowsingData(isFullExport bool) (*browingdata.Data, error)
 }
