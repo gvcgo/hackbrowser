@@ -3,7 +3,6 @@ module github.com/moqsien/hackbrowser
 go 1.20
 
 require (
-	github.com/glebarez/go-sqlite v1.21.1
 	github.com/gocarina/gocsv v0.0.0-20230226133904-70c27cb2918a
 	github.com/godbus/dbus/v5 v5.1.0
 	github.com/gookit/slog v0.4.0
@@ -16,6 +15,7 @@ require (
 	golang.org/x/crypto v0.7.0
 	golang.org/x/exp v0.0.0-20230310171629-522b1b587ee0
 	golang.org/x/text v0.8.0
+	gorm.io/gorm v1.25.1
 	modernc.org/sqlite v1.22.1
 )
 
@@ -28,6 +28,8 @@ require (
 	github.com/gookit/color v1.5.2 // indirect
 	github.com/gookit/goutil v0.6.1 // indirect
 	github.com/gookit/gsr v0.0.8 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
