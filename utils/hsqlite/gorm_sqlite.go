@@ -16,7 +16,7 @@ import (
 )
 
 // DriverName is the default driver name for SQLite.
-const DriverName = "sqlite"
+const DriverName = "sqlite3"
 
 type Migrator struct {
 	migrator.Migrator
@@ -33,7 +33,7 @@ func Open(dsn string) gorm.Dialector {
 }
 
 func (dialector Dialector) Name() string {
-	return "sqlite"
+	return DriverName
 }
 
 func (dialector Dialector) Initialize(db *gorm.DB) (err error) {
