@@ -9,7 +9,7 @@ import (
 	"time"
 
 	// import sqlite3 driver
-	_ "github.com/moqsien/hackbrowser/utils/hsqlite"
+	_ "github.com/glebarez/sqlite"
 
 	"github.com/moqsien/hackbrowser/crypto"
 	"github.com/moqsien/hackbrowser/item"
@@ -34,7 +34,7 @@ const (
 )
 
 func (c *ChromiumPassword) Parse(masterKey []byte) error {
-	db, err := sql.Open("sqlite3", item.TempChromiumPassword)
+	db, err := sql.Open("sqlite", item.TempChromiumPassword)
 	if err != nil {
 		return err
 	}
@@ -101,7 +101,7 @@ const (
 )
 
 func (c *YandexPassword) Parse(masterKey []byte) error {
-	db, err := sql.Open("sqlite3", item.TempYandexPassword)
+	db, err := sql.Open("sqlite", item.TempYandexPassword)
 	if err != nil {
 		return err
 	}
@@ -234,7 +234,7 @@ func (f *FirefoxPassword) Parse(masterKey []byte) error {
 }
 
 func getFirefoxDecryptKey(key4file string) (item1, item2, a11, a102 []byte, err error) {
-	keyDB, err := sql.Open("sqlite3", key4file)
+	keyDB, err := sql.Open("sqlite", key4file)
 	if err != nil {
 		return nil, nil, nil, nil, err
 	}

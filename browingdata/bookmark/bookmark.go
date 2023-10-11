@@ -7,7 +7,7 @@ import (
 	"time"
 
 	// import sqlite3 driver
-	_ "github.com/moqsien/hackbrowser/utils/hsqlite"
+	_ "github.com/glebarez/sqlite"
 
 	"github.com/moqsien/hackbrowser/item"
 	"github.com/moqsien/hackbrowser/log"
@@ -94,7 +94,7 @@ const (
 )
 
 func (f *FirefoxBookmark) Parse(_ []byte) error {
-	db, err := sql.Open("sqlite3", item.TempFirefoxBookmark)
+	db, err := sql.Open("sqlite", item.TempFirefoxBookmark)
 	if err != nil {
 		return err
 	}

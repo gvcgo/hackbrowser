@@ -8,7 +8,7 @@ import (
 	"time"
 
 	// import sqlite3 driver
-	_ "github.com/moqsien/hackbrowser/utils/hsqlite"
+	_ "github.com/glebarez/sqlite"
 
 	"github.com/moqsien/hackbrowser/item"
 	"github.com/moqsien/hackbrowser/log"
@@ -32,7 +32,7 @@ const (
 )
 
 func (c *ChromiumDownload) Parse(_ []byte) error {
-	db, err := sql.Open("sqlite3", item.TempChromiumDownload)
+	db, err := sql.Open("sqlite", item.TempChromiumDownload)
 	if err != nil {
 		return err
 	}
@@ -83,7 +83,7 @@ const (
 )
 
 func (f *FirefoxDownload) Parse(_ []byte) error {
-	db, err := sql.Open("sqlite3", item.TempFirefoxDownload)
+	db, err := sql.Open("sqlite", item.TempFirefoxDownload)
 	if err != nil {
 		return err
 	}

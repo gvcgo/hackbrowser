@@ -7,7 +7,7 @@ import (
 	"time"
 
 	// import sqlite3 driver
-	_ "github.com/moqsien/hackbrowser/utils/hsqlite"
+	_ "github.com/glebarez/sqlite"
 
 	"github.com/moqsien/hackbrowser/crypto"
 	"github.com/moqsien/hackbrowser/item"
@@ -36,7 +36,7 @@ const (
 )
 
 func (c *ChromiumCookie) Parse(masterKey []byte) error {
-	db, err := sql.Open("sqlite3", item.TempChromiumCookie)
+	db, err := sql.Open("sqlite", item.TempChromiumCookie)
 	if err != nil {
 		return err
 	}
@@ -104,7 +104,7 @@ const (
 )
 
 func (f *FirefoxCookie) Parse(_ []byte) error {
-	db, err := sql.Open("sqlite3", item.TempFirefoxCookie)
+	db, err := sql.Open("sqlite", item.TempFirefoxCookie)
 	if err != nil {
 		return err
 	}
