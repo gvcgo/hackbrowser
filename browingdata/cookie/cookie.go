@@ -9,10 +9,10 @@ import (
 	// import sqlite3 driver
 	_ "github.com/glebarez/sqlite"
 
-	"github.com/moqsien/hackbrowser/crypto"
-	"github.com/moqsien/hackbrowser/item"
-	"github.com/moqsien/hackbrowser/log"
-	"github.com/moqsien/hackbrowser/utils/typeutil"
+	"github.com/gvcgo/hackbrowser/crypto"
+	"github.com/gvcgo/hackbrowser/item"
+	"github.com/gvcgo/hackbrowser/log"
+	"github.com/gvcgo/hackbrowser/utils/typeutil"
 )
 
 type ChromiumCookie []cookie

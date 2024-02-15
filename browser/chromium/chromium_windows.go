@@ -9,10 +9,10 @@ import (
 
 	"github.com/tidwall/gjson"
 
-	"github.com/moqsien/hackbrowser/crypto"
-	"github.com/moqsien/hackbrowser/item"
-	"github.com/moqsien/hackbrowser/log"
-	"github.com/moqsien/hackbrowser/utils/fileutil"
+	"github.com/gvcgo/hackbrowser/crypto"
+	"github.com/gvcgo/hackbrowser/item"
+	"github.com/gvcgo/hackbrowser/log"
+	"github.com/gvcgo/hackbrowser/utils/fileutil"
 )
 
 var errDecodeMasterKeyFailed = errors.New("decode master key failed")

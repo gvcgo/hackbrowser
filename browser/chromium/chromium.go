@@ -5,10 +5,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/moqsien/hackbrowser/browingdata"
-	"github.com/moqsien/hackbrowser/item"
-	"github.com/moqsien/hackbrowser/utils/fileutil"
-	"github.com/moqsien/hackbrowser/utils/typeutil"
+	"github.com/gvcgo/hackbrowser/browingdata"
+	"github.com/gvcgo/hackbrowser/item"
+	"github.com/gvcgo/hackbrowser/utils/fileutil"
+	"github.com/gvcgo/hackbrowser/utils/typeutil"
 )
 
 const (

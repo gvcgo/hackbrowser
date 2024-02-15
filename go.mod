@@ -1,4 +1,4 @@
-module github.com/moqsien/hackbrowser
+module github.com/gvcgo/hackbrowser
 
 go 1.20
 

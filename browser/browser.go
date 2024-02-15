@@ -5,13 +5,13 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/moqsien/hackbrowser/browingdata"
-	"github.com/moqsien/hackbrowser/browser/chromium"
-	"github.com/moqsien/hackbrowser/browser/firefox"
-	"github.com/moqsien/hackbrowser/item"
-	"github.com/moqsien/hackbrowser/log"
-	"github.com/moqsien/hackbrowser/utils/fileutil"
-	"github.com/moqsien/hackbrowser/utils/typeutil"
+	"github.com/gvcgo/hackbrowser/browingdata"
+	"github.com/gvcgo/hackbrowser/browser/chromium"
+	"github.com/gvcgo/hackbrowser/browser/firefox"
+	"github.com/gvcgo/hackbrowser/item"
+	"github.com/gvcgo/hackbrowser/log"
+	"github.com/gvcgo/hackbrowser/utils/fileutil"
+	"github.com/gvcgo/hackbrowser/utils/typeutil"
 )
 
 type Browser interface {

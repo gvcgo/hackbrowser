@@ -3,7 +3,7 @@
 package browser
 
 import (
-	"github.com/moqsien/hackbrowser/item"
+	"github.com/gvcgo/hackbrowser/item"
 )
 
 var (
